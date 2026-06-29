@@ -1,0 +1,25 @@
+name: Bash CI 
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+    paths:
+      - "scripts/**"
+  workflow_dispatch:
+
+jobs:
+  project-validation:
+    name: Show basic information
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: skript ausführbar machen 
+        run: chmod +x scripts/*.sh
+      - name: informationen werden angezeigt 
+        run: bash scripts/02_validate_project.sh
