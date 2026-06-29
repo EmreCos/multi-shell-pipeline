@@ -1,0 +1,25 @@
+name: Info Workflow
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+    paths:
+      - "scripts/**"
+  workflow_dispatch:
+
+jobs:
+  info:
+    name: Show basic information
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: skript ausführbar machen 
+        run: chmod +x scripts/*.sh
+      - name: informationen werden angezeigt 
+        run: bash scripts/01_show_info.sh
