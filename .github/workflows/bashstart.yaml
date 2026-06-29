@@ -33,5 +33,5 @@ jobs:
 
       - name: skript ausführbar machen 
         run: chmod +x scripts/*.sh
-      - name: Validierung wird ausgeführt
+      - name:  Logs werden analyisiert
         run: bash scripts/03_analyze_logs.sh    
