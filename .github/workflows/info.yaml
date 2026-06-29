@@ -21,5 +21,9 @@ jobs:
 
       - name: skript ausführbar machen 
         run: chmod +x scripts/*.sh
+      - name: Startinformation 
+        run: | 
+         source scripts/common.sh 
+         print_header "Informtaion das funktion aufgerufen wurde und alles in ordnung ist"
       - name: informationen werden angezeigt 
         run: bash scripts/01_show_info.sh
