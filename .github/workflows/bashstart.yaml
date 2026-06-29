@@ -21,5 +21,5 @@ jobs:
 
       - name: skript ausführbar machen 
         run: chmod +x scripts/*.sh
-      - name: informationen werden angezeigt 
+      - name: Validierung wird ausgeführt
         run: bash scripts/02_validate_project.sh
