@@ -12,7 +12,7 @@ on:
 
 jobs:
   project-validation:
-    name: Show basic information
+    name: project-validation
     runs-on: ubuntu-latest
 
     steps:
@@ -23,3 +23,15 @@ jobs:
         run: chmod +x scripts/*.sh
       - name: Validierung wird ausgeführt
         run: bash scripts/02_validate_project.sh
+
+  analyze-logs:
+    name:  analyze-logs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: skript ausführbar machen 
+        run: chmod +x scripts/*.sh
+      - name: Validierung wird ausgeführt
+        run: bash scripts/03_analyze_logs.sh    
