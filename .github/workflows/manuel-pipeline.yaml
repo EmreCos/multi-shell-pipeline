@@ -6,8 +6,8 @@ on:
     inputs:
       student_name:
         description: Name welche im Bash skript 07_manual_greeting.sh eingegeben werden soll 
-        required: false 
-        default: "Ibrahim"
+        required: true 
+
 
 jobs:
   info:
