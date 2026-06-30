@@ -3,7 +3,7 @@ name:  cronjob-pipeline
 on:
 
   schedule:
-    - cron: "* * * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   info:
