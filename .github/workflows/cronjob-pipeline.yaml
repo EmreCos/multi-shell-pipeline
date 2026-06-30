@@ -16,11 +16,11 @@ jobs:
       - name: Skripte ausführbar machen
         run: chmod +x scripts/*.sh tests/*.sh
 
-      - name: Namensbegrüssung findest du hier 
+      - name: info zum skript 
         run: bash scripts/01_show_info.sh
 
-      - name: Namensbegrüssung findest du hier 
+      - name: validierung des projektes
         run: bash scripts/02_validate_project.sh
 
-      - name: Namensbegrüssung findest du hier 
+      - name: analysiere alle logs 
         run: bash scripts/03_analyze_logs.sh        
