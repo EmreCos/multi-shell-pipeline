@@ -6,7 +6,7 @@ on:
     - cron: "*/5 * * * *"
 
 jobs:
-  info:
+  loganalyse:
     runs-on: ubuntu-latest
 
     steps:
