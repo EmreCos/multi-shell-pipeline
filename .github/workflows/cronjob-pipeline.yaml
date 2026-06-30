@@ -1,0 +1,27 @@
+name:  cronjob-pipeline
+
+on:
+
+  schedule:
+    - cron: "*/2 * * * *"
+  workflow_dispatch:
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository herunterladen
+        uses: actions/checkout@v4
+
+      - name: Skripte ausführbar machen
+        run: chmod +x scripts/*.sh tests/*.sh
+
+      - name: Namensbegrüssung findest du hier 
+        run: bash scripts/01_show_info.sh
+
+      - name: Namensbegrüssung findest du hier 
+        run: bash scripts/02_validate_project.sh
+
+      - name: Namensbegrüssung findest du hier 
+        run: bash scripts/03_analyze_logs.sh        
